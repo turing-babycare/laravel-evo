@@ -12,16 +12,29 @@
         }
     },
     "require": {
-        "guzzlehttp/guzzle": "^7.2",
-        "illuminate/support": "^8.10",
-        "illuminate/contracts": "^8.10",
-        "ext-json": "^7.4"
+        "php": "^7.4",
+        "ext-curl": "^7.4",
+        "ext-json": "^7.4",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "laravel/framework": "^8.10"
     },
     "extra": {
         "laravel": {
             "providers": [
                 "Turing\\LaravelEvo\\LaravelEvoServiceProvider"
-            ]
+            ],
+            "alias": {
+                "Fetch": "Turing\\LaravelEvo\\Facades\\Fetch",
+                "Reply": "Turing\\LaravelEvo\\Facades\\Reply"
+            }
         }
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "license": "MIT"
 }

@@ -5,26 +5,44 @@ namespace Turing\LaravelEvo\Microservice;
 
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
-use Turing\LaravelEvo\Microservice\Exceptions\FetchException;
+use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Exception\RequestException;
 use Psr\Http\Message\ResponseInterface;
+use Turing\LaravelEvo\Microservice\Exceptions\FetchException;
+use \Exception;
+use \Throwable;
 
 class Fetch
 {
-    public $client;
-    private $microserviceHosts;
-    private $traceId;
+    public Client $client;
+    private array $microserviceHosts;
+    private string $traceId;
 
     public function __construct($microserviceHosts, $traceId)
     {
-        $this->client = new Client();
+        $this->client = new Client(['timeout' => 1]);
         $this->microserviceHosts = $microserviceHosts;
         $this->traceId = $traceId;
     }
 
+    /**
+     * @param $hostName
+     * @return mixed
+     * @throws FetchException
+     * @throws Exception
+     */
     public function getHostUrl($hostName)
     {
-        return $this->microserviceHosts[$hostName];
+        try {
+            $url = $this->microserviceHosts[$hostName];
+            if (!$url) {
+                throw new Exception();
+            }
+            return $url;
+        } catch (Throwable $exception) {
+            throw new FetchException('未找到微服务"' . $hostName . '"的主机地址');
+        }
+
     }
 
     /**
@@ -32,18 +50,40 @@ class Fetch
      * @param $method
      * @param $url
      * @param $payload
-     * @return ResponseInterface
+     * @return mixed
      * @throws FetchException
-     * @throws GuzzleException
      */
     public function request($hostName, $method, $url, $payload)
     {
         $host = $this->getHostUrl($hostName);
-        if (!$host) {
-            throw new FetchException('未找到微服务"' . $hostName . '"的主机地址');
-        }
-        return $this->client->request($method, $host . $hostName, [
+        $promise = $this->client->requestAsync($method, $host . $url, [
             'json' => $payload
         ]);
+        try {
+            $resp = $promise->wait();
+            return $this->parseResponse($resp);
+        } catch (RequestException $e) {
+            return $this->parseResponse($e->getResponse());
+        } catch (ConnectException $e) {
+            throw new FetchException('[MS]服务通讯出现异常: ' . $e->getMessage());
+        } catch (FetchException $e) {
+            throw $e;
+        } catch (Exception $e) {
+            throw new FetchException('[MS]服务通讯出现未知错误: ' . $e->getMessage());
+        }
+    }
+
+    /**
+     * @param ResponseInterface $response
+     * @return mixed
+     * @throws FetchException
+     */
+    protected function parseResponse(ResponseInterface $response)
+    {
+        $body = json_decode($response->getBody()->getContents(), true);
+        if (empty($body['code']) || $body['code'] !== 1000) {
+            throw new FetchException(empty($body['message']) ? '后端服务异常' : $body['message']);
+        }
+        return $body['data'];
     }
 }
