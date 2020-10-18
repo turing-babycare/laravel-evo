@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9abecaad-3f98-4adc-af95-4ed1a0c774df" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/src/LaravelEvoServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Microservice/Exceptions/FetchException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Microservice/Fetch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/evo.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1j2BU5oDoxaTBeqJy4tLbEsMIdW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/config" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9abecaad-3f98-4adc-af95-4ed1a0c774df" name="默认的" comment="" />
+      <created>1602992318811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602992318811</updated>
+      <workItem from="1602992319831" duration="7667000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2681" y="337" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602998352829">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2681" y="337" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.23.2560.1417/0.23.1792.1097@1792.23.2560.1417" timestamp="1602998352829" />
+    <state x="2364" y="552" key="NewPhpClassDialog" timestamp="1603001095522">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2364" y="552" key="NewPhpClassDialog/1792.23.2560.1417/0.23.1792.1097@1792.23.2560.1417" timestamp="1603001095522" />
+    <state x="3606" y="593" key="NewPhpFileDialog" timestamp="1603001280373">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="3606" y="593" key="NewPhpFileDialog/1792.23.2560.1417/0.23.1792.1097@1792.23.2560.1417" timestamp="1603001280373" />
+    <state x="2714" y="518" key="SettingsEditor" timestamp="1602992591244">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2714" y="518" key="SettingsEditor/1792.23.2560.1417/0.23.1792.1097@1792.23.2560.1417" timestamp="1602992591244" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1602998136786">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/1792.23.2560.1417/0.23.1792.1097@1792.23.2560.1417" timestamp="1602998136786" />
+  </component>
+</project>

@@ -1,0 +1,27 @@
+{
+    "name": "turing/laravel-evo",
+    "authors": [
+        {
+            "name": "文磊",
+            "email": "wenleigood@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Turing\\LaravelEvo\\": "src"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.2",
+        "illuminate/support": "^8.10",
+        "illuminate/contracts": "^8.10",
+        "ext-json": "^7.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Turing\\LaravelEvo\\LaravelEvoServiceProvider"
+            ]
+        }
+    }
+}
